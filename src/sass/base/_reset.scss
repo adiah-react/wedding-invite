@@ -1,0 +1,183 @@
+@use "../abstracts/" as abs;
+
+// Box sizing
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Reset margins
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+// Set initial font weights
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+// Set up the body
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  font-weight: 500;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  line-height: 1.5;
+  min-height: 100vh;
+
+  // display: flex;
+
+  // @include abs.breakpoint(xlarge) {
+  //   justify-content: center;
+  // }
+
+  // Using aic, causes the padding to not work on smaller screens
+  // investigate further.
+  // align-items: center;
+
+  // overflow-x: hidden;
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+// #root {
+//   display: flex;
+//   flex-direction: column;
+//   gap: abs.rem(22);
+
+//   padding-block: 1.5rem;
+//   padding-inline: 0.5rem;
+
+//   @include abs.breakpoint(medium) {
+//     padding-inline: abs.rem(22);
+//     padding-block: 2rem;
+//   }
+
+//   @include abs.breakpoint(xlarge) {
+//     width: 75%;
+//     max-width: 1300px;
+//     display: grid;
+//     grid-template-columns: 2fr 3fr;
+//     // grid-template-rows: repeat(6, min-content);
+//     grid-template-rows: auto auto 2fr 3fr auto auto;
+//     // grid-auto-rows: minmax(100px, auto);
+//     grid-template-areas:
+//       "intro      intro"
+//       "skills     blog"
+//       "hobbies    blog"
+//       "hobbies    experience"
+//       "projectBar projectBar"
+//       "projects   projects";
+//     column-gap: 2rem;
+//     row-gap: 2rem;
+//     justify-content: center;
+//   }
+// }
+
+// Make images easier to work with
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+// make form elements easier to work with
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// Remove animations for people who've turned them off
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.accent {
+  color: var(--clr-accent);
+}
+
+.container {
+  @include abs.breakpoint(large) {
+    width: 85%;
+    max-width: abs.rem(1600);
+  }
+}
+
+.section__header {
+  font-size: abs.rem(14);
+  font-weight: medium;
+  color: var(--clr-section-header);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section__subheader {
+  font-size: abs.rem(32);
+  font-weight: medium;
+  color: var(--clr-light);
+  text-align: center;
+  margin-top: abs.rem(5);
+}
+
+.button {
+  position: relative;
+  color: var(--clr-dark);
+  font-family: var(--ff-sans);
+  background-color: var(--clr-accent);
+  border-radius: 6px;
+  padding: abs.rem(16) abs.rem(24);
+  padding-right: abs.rem(56);
+  font-size: abs.rem(20);
+  text-decoration: none;
+
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 0.5rem;
+
+  span {
+    // font-size: abs.rem(20);
+    // width: abs.rem(20);
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    svg {
+      height: abs.rem(24);
+      width: abs.rem(24);
+      margin-left: 0.5rem;
+    }
+  }
+  //  change to roboto?
+  // &--icon {
+
+  // }
+}
