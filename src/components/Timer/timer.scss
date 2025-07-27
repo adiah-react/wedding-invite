@@ -1,0 +1,52 @@
+@use "../../sass/abstracts/" as abs;
+
+.timer {
+  margin-top: abs.rem(72);
+
+  border: 1px solid red;
+
+  .title {
+    font-family: var(--ff-serif);
+    font-size: abs.rem(24);
+    margin-left: auto;
+    margin-right: abs.rem(50);
+    text-align: right;
+    text-transform: uppercase;
+    max-width: abs.rem(200);
+    line-height: abs.rem(25);
+
+    border: 1px solid green;
+
+    span {
+      font-family: var(--ff-cursive);
+      font-size: abs.rem(48);
+      text-transform: none;
+    }
+  }
+
+  .countdown {
+    span {
+      margin-left: abs.rem(40);
+      max-width: fit-content;
+      margin-right: abs.rem(24);
+      font-family: var(--ff-cursive);
+      font-size: abs.rem(48);
+    }
+  }
+
+  .labels {
+    font-family: var(--ff-serif);
+    font-size: abs.rem(17);
+    text-transform: uppercase;
+    max-width: min-content;
+    margin-left: abs.rem(62);
+    display: flex;
+    gap: abs.rem(10);
+
+    border: 1px solid green;
+
+    span {
+      border: 1px solid blue;
+    }
+  }
+}
