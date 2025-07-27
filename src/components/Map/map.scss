@@ -1,0 +1,12 @@
+@use "../../sass/abstracts/" as abs;
+
+.map {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  margin-top: 3rem;
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+}
