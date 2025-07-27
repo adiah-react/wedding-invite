@@ -14,8 +14,9 @@
 
   // font-families
   --ff-sans: "Inter", sans-serif;
-  --ff-serif: "Kurale", serif;
-
+  // --ff-serif: "Kurale", serif;
+  --ff-serif: "Playfair Display", serif;
+  --ff-cursive: "Allura", cursive;
   // font-sizes from ../abstract/type
   // Might need to add more breakpoints
   @each $screen-size, $font-size in a.$type-scale {

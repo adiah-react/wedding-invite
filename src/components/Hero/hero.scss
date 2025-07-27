@@ -1,1 +1,86 @@
 @use "../../sass/abstracts/" as abs;
+
+.hero {
+  .top-text {
+    margin-top: abs.rem(44);
+    margin-left: auto;
+    margin-right: abs.rem(47);
+    font-family: var(--ff-serif);
+    font-size: abs.rem(24);
+    text-transform: uppercase;
+    max-width: abs.rem(180);
+    text-align: right;
+
+    border: 1px solid red;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .text {
+    margin-top: abs.rem(40);
+    padding-top: abs.rem(40);
+    padding-bottom: abs.rem(347);
+    padding-inline-end: abs.rem(51);
+    border-radius: 42px;
+
+    border: 1px solid red;
+
+    .subheading {
+      font-family: var(--ff-serif);
+      font-size: abs.rem(20);
+      text-align: right;
+      max-width: abs.rem(254);
+      margin-left: auto;
+
+      border: 1px solid green;
+    }
+
+    h1 {
+      margin-top: abs.rem(392);
+      font-family: var(--ff-serif);
+      font-size: abs.rem(48);
+      text-align: right;
+      text-transform: uppercase;
+      max-width: abs.rem(288);
+      line-height: abs.rem(50);
+
+      border: 1px solid green;
+
+      .cursive {
+        font-size: abs.rem(46);
+      }
+    }
+
+    .date {
+      display: flex;
+      font-family: var(--ff-cursive);
+      margin-left: auto;
+      border: 1px solid green;
+      align-items: baseline;
+      justify-content: end;
+      gap: abs.rem(5);
+      line-height: abs.rem(50);
+      margin-top: abs.rem(70);
+
+      .month {
+        font-size: abs.rem(46);
+      }
+
+      .day {
+        font-size: abs.rem(150);
+      }
+    }
+
+    .details {
+      font-family: var(--ff-serif);
+      font-size: abs.rem(17);
+      text-align: right;
+      max-width: abs.rem(250);
+      margin-left: auto;
+
+      border: 1px solid green;
+    }
+  }
+}

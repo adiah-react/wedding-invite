@@ -5,17 +5,20 @@ const Hero = () => {
       <p className="top-text">You're cordially invited</p>
       <div className="image"></div>
       <div className="text">
-        <p>Celebrating the beautiful beginning of</p>
+        <p className="subheading">Celebrating the beautiful beginning of</p>
         <h1>
           Rhiannon <span className="cursive">&amp;</span> Rashaad
         </h1>
-        <p className="date">
+        <div className="date">
+          <p className="month">June</p>
+          <p className="day">20</p>
+        </div>
+        {/* <p className="date">
           June <span>20</span>
-        </p>
+        </p> */}
         <div className="details">
           <p>Two o'clock in the afternoon</p>
-          <p>St. Benedict's Roman Catholic Church,</p>
-          <p>La Romain</p>
+          <p>St. Benedict's Roman Catholic Church, La Romaine</p>
         </div>
       </div>
     </div>
