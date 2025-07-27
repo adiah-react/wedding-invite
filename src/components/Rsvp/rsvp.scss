@@ -55,5 +55,43 @@
         margin-right: abs.rem(43);
       }
     }
+    .image {
+      display: none;
+    }
+  }
+
+  .bottom {
+    border: 1px solid blue;
+
+    .form {
+      margin-top: abs.rem(40);
+      border: 1px solid pink;
+
+      form {
+        padding: abs.rem(20);
+        border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .form-group {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+
+        fieldset {
+          margin-top: 1rem;
+          width: 100%;
+        }
+
+        button {
+          margin-top: 1rem;
+          align-self: start;
+          width: 100%;
+          padding: 0.5rem;
+        }
+      }
+    }
   }
 }
