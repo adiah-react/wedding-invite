@@ -62,7 +62,11 @@ const Rsvp = () => {
             <button type="submit">Submit</button>
           </form>
         </div>
-        <div className="thanks"></div>
+        <div className="thanks">
+          <p className="top">
+            Thank you <span>for your response</span>
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import "@fontsource/allura";
+import "@fontsource/inter";
 import "@fontsource/playfair-display";
 
 import { StrictMode } from "react";

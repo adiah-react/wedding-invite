@@ -93,5 +93,25 @@
         }
       }
     }
+
+    .thanks {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      max-width: abs.rem(265);
+      line-height: abs.rem(40);
+      margin-top: 1.5rem;
+      margin-left: auto;
+      margin-right: 1.5rem;
+      .top {
+        font-family: var(--ff-cursive);
+        font-size: abs.rem(67);
+
+        span {
+          font-family: var(--ff-sans);
+          font-size: abs.rem(16);
+        }
+      }
+    }
   }
 }
