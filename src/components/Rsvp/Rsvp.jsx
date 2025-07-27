@@ -40,7 +40,7 @@ const Rsvp = () => {
                   name="attendance"
                   value="yes"
                 />
-                <label for="attendanceChoice1">Yes</label>
+                <label htmlFor="attendanceChoice1">Yes</label>
 
                 <input
                   type="radio"
@@ -48,7 +48,7 @@ const Rsvp = () => {
                   name="attendance"
                   value="no"
                 />
-                <label for="attendanceChoice2">No</label>
+                <label htmlFor="attendanceChoice2">No</label>
 
                 <input
                   type="radio"
@@ -56,7 +56,7 @@ const Rsvp = () => {
                   name="attendance"
                   value="maybe"
                 />
-                <label for="attendanceChoice3">Maybe</label>
+                <label htmlFor="attendanceChoice3">Maybe</label>
               </div>
             </fieldset>
             <button type="submit">Submit</button>
