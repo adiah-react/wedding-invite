@@ -1,25 +1,67 @@
+import { motion } from "motion/react";
 import "./hero.scss";
+
 const Hero = () => {
   return (
     <div className="hero">
-      <p className="top-text">You're cordially invited</p>
+      <motion.p
+        className="top-text"
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        You're cordially invited
+      </motion.p>
       <div className="image"></div>
       <div className="text">
-        <p className="subheading">Celebrating the beautiful beginning of</p>
-        <h1>
+        <motion.p
+          className="subheading"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          Celebrating the beautiful beginning of
+        </motion.p>
+        <motion.h1
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{
+            once: true,
+            margin: "-200px",
+            // amount: 0.75
+          }}
+        >
           Rhiannon <span className="cursive">&amp;</span> Rashaad
-        </h1>
-        <div className="date">
+        </motion.h1>
+        <motion.div
+          className="date"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{
+            once: true,
+            margin: "-100px",
+          }}
+        >
           <p className="month">June</p>
           <p className="day">20</p>
-        </div>
+        </motion.div>
         {/* <p className="date">
           June <span>20</span>
         </p> */}
-        <div className="details">
+        <motion.div
+          className="details"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <p>Two o'clock in the afternoon</p>
           <p>St. Benedict's Roman Catholic Church, La Romaine</p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

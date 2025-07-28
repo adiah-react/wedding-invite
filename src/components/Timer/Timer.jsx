@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 import Countdown from "react-countdown";
 import Counter from "../ReactBits/Counter/Counter";
 import "./timer.scss";
@@ -50,14 +52,20 @@ const Timer = () => {
   };
 
   return (
-    <div className="timer">
+    <motion.div
+      className="timer"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 2.0, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-200px" }}
+    >
       <p className="title">
         Time left until <span>the</span> wedding
       </p>
       <div className="countdown">
         {<Countdown date={date} renderer={renderer} />}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
