@@ -10,7 +10,8 @@
       .start {
         font-size: abs.rem(59);
         font-family: var(--ff-cursive);
-        text-align: right;
+        // text-align: right;
+        justify-content: end;
         margin-right: abs.rem(43);
       }
       .second-line {
@@ -107,10 +108,10 @@
         font-family: var(--ff-cursive);
         font-size: abs.rem(67);
 
-        span {
-          font-family: var(--ff-sans);
-          font-size: abs.rem(16);
-        }
+        // span {
+        //   font-family: var(--ff-sans);
+        //   font-size: abs.rem(16);
+        // }
       }
     }
   }

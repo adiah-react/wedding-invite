@@ -1,3 +1,4 @@
+import BlurText from "../ReactBits/BlurText/BlurText";
 import "./rsvp.scss";
 
 const Rsvp = () => {
@@ -5,7 +6,16 @@ const Rsvp = () => {
     <div className="rsvp">
       <div className="top">
         <div className="text">
-          <p className="start">kindly</p>
+          {/* <p className="start">kindly</p> */}
+          {/* <MyBlur text="kindly" className="start" /> */}
+          <BlurText
+            text="kindly"
+            delay={150}
+            animateBy="letters"
+            direction="top"
+            className="start"
+          />
+
           <div className="second-line">
             <p className="bold">RSVP</p>
           </div>
@@ -63,9 +73,22 @@ const Rsvp = () => {
           </form>
         </div>
         <div className="thanks">
-          <p className="top">
-            Thank you <span>for your response</span>
-          </p>
+          <BlurText
+            text="Thank you"
+            delay={150}
+            animateBy="letters"
+            direction="top"
+            className="top"
+          />
+          <p>for your response</p>
+          {/* <motion.p
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            for your response
+          </motion.p> */}
         </div>
       </div>
     </div>
