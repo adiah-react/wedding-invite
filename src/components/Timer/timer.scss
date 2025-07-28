@@ -27,47 +27,18 @@
   .countdown {
     display: flex;
     justify-content: center;
-
-    span {
-      margin-left: abs.rem(40);
-      max-width: fit-content;
-      margin-right: abs.rem(24);
-      font-family: var(--ff-cursive);
-      font-size: abs.rem(48);
-      letter-spacing: 2px;
-    }
+    margin-top: abs.rem(16);
 
     .block {
       display: flex;
       flex-direction: column;
       align-items: center;
-      .time {
-        font-family: var(--ff-cursive);
-        font-size: abs.rem(48);
-        letter-spacing: 2px;
-      }
 
       .label {
         font-family: var(--ff-serif);
         font-size: abs.rem(17);
         text-transform: uppercase;
       }
-    }
-  }
-
-  .labels {
-    font-family: var(--ff-serif);
-    font-size: abs.rem(17);
-    text-transform: uppercase;
-    max-width: min-content;
-    margin-left: abs.rem(64);
-    display: flex;
-    gap: abs.rem(12);
-
-    border: 1px solid green;
-
-    span {
-      border: 1px solid blue;
     }
   }
 }
