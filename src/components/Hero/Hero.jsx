@@ -14,12 +14,17 @@ const Hero = () => {
         You're cordially invited
       </motion.p>
       <div className="image"></div>
-      <div className="text">
+      <motion.div
+        className="text"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      >
         <motion.p
           className="subheading"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ delay: 2, duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           Celebrating the beautiful beginning of
@@ -62,7 +67,7 @@ const Hero = () => {
           <p>Two o'clock in the afternoon</p>
           <p>St. Benedict's Roman Catholic Church, La Romaine</p>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };
