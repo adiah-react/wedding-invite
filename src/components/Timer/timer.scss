@@ -3,7 +3,9 @@
 .timer {
   margin-top: abs.rem(72);
 
-  border: 1px solid red;
+  border-radius: abs.rem(43);
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 
   .title {
     font-family: var(--ff-serif);
@@ -14,8 +16,6 @@
     text-transform: uppercase;
     max-width: abs.rem(200);
     line-height: abs.rem(25);
-
-    border: 1px solid green;
 
     span {
       font-family: var(--ff-cursive);
