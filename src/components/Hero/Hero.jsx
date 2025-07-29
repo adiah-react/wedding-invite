@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import "./hero.scss";
 
-const Hero = () => {
+const Hero = ({ name }) => {
   return (
     <div className="hero">
       <motion.p
@@ -11,6 +11,8 @@ const Hero = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
+        Wah gwan {name},
+        <br />
         You're cordially invited
       </motion.p>
       <div className="image"></div>
@@ -32,10 +34,10 @@ const Hero = () => {
         <motion.h1
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ delay: 3, duration: 0.8, ease: "easeOut" }}
           viewport={{
             once: true,
-            margin: "-200px",
+            // margin: "-200px",
             // amount: 0.75
           }}
         >

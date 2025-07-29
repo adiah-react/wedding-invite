@@ -1,7 +1,7 @@
 import BlurText from "../ReactBits/BlurText/BlurText";
 import "./rsvp.scss";
 
-const Rsvp = () => {
+const Rsvp = ({ access }) => {
   return (
     <div className="rsvp">
       <div className="top">
@@ -69,6 +69,36 @@ const Rsvp = () => {
                 <label htmlFor="attendanceChoice3">Maybe</label>
               </div>
             </fieldset>
+            {access.includes("reception") && (
+              <fieldset>
+                <legend>Will you attend the reception?</legend>
+                <div>
+                  <input
+                    type="radio"
+                    id="attendanceChoice1"
+                    name="attendance"
+                    value="yes"
+                  />
+                  <label htmlFor="attendanceChoice1">Yes</label>
+
+                  <input
+                    type="radio"
+                    id="attendanceChoice2"
+                    name="attendance"
+                    value="no"
+                  />
+                  <label htmlFor="attendanceChoice2">No</label>
+
+                  <input
+                    type="radio"
+                    id="attendanceChoice3"
+                    name="attendance"
+                    value="maybe"
+                  />
+                  <label htmlFor="attendanceChoice3">Maybe</label>
+                </div>
+              </fieldset>
+            )}
             <button type="submit">Submit</button>
           </form>
         </div>
