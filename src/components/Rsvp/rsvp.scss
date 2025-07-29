@@ -2,8 +2,8 @@
 
 .rsvp {
   margin-top: abs.rem(72);
-
-  border: 1px solid red;
+  border-radius: abs.rem(43);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 
   .top {
     .text {
@@ -24,8 +24,6 @@
           text-align: right;
           margin-left: auto;
           margin-right: abs.rem(43);
-
-          border: 1px solid green;
         }
       }
 
@@ -62,18 +60,17 @@
   }
 
   .bottom {
-    border: 1px solid blue;
-
     .form {
       margin-top: abs.rem(40);
-      border: 1px solid pink;
+      padding: abs.rem(20);
 
       form {
         padding: abs.rem(20);
-        border: 1px solid green;
         display: flex;
         flex-direction: column;
         align-items: center;
+        border-radius: abs.rem(10);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
         .form-group {
           width: 100%;

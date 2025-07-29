@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="image"></div>
       <div className="text">
         <motion.p
-          className="subheading frosted"
+          className="subheading"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
