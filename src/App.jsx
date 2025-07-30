@@ -1,5 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router";
-import InvitePage from "./components/InvitePage/InvitePage";
+import InvitePage from "./pages/InvitePage/InvitePage";
 
 const App = () => {
   return (

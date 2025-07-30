@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import CeremonyDetails from "../CeremonyDetails/CeremonyDetails";
+import CeremonyDetails from "../../components/CeremonyDetails/CeremonyDetails";
 
 const invitations = {
   ceremony123: { name: "Aunt May", access: ["ceremony"] },
