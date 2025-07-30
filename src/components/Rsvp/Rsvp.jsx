@@ -38,41 +38,11 @@ const Rsvp = ({ access }) => {
               <label htmlFor="message">Message</label>
               <textarea name="" id="message" rows="4"></textarea>
             </div>
-            {/* <div className="form-group">
-              <label htmlFor="attendance">Attendance</label>
-            </div> */}
+
             <fieldset>
-              <legend>Will you be attending?</legend>
+              <legend>Will you attend the ceremony?</legend>
               <div>
-                <input
-                  type="radio"
-                  id="attendanceChoice1"
-                  name="attendance"
-                  value="yes"
-                />
-                <label htmlFor="attendanceChoice1">Yes</label>
-
-                <input
-                  type="radio"
-                  id="attendanceChoice2"
-                  name="attendance"
-                  value="no"
-                />
-                <label htmlFor="attendanceChoice2">No</label>
-
-                <input
-                  type="radio"
-                  id="attendanceChoice3"
-                  name="attendance"
-                  value="maybe"
-                />
-                <label htmlFor="attendanceChoice3">Maybe</label>
-              </div>
-            </fieldset>
-            {access.includes("reception") && (
-              <fieldset>
-                <legend>Will you attend the reception?</legend>
-                <div>
+                <div className="form-group">
                   <input
                     type="radio"
                     id="attendanceChoice1"
@@ -80,7 +50,9 @@ const Rsvp = ({ access }) => {
                     value="yes"
                   />
                   <label htmlFor="attendanceChoice1">Yes</label>
+                </div>
 
+                <div className="form-group">
                   <input
                     type="radio"
                     id="attendanceChoice2"
@@ -88,7 +60,9 @@ const Rsvp = ({ access }) => {
                     value="no"
                   />
                   <label htmlFor="attendanceChoice2">No</label>
+                </div>
 
+                <div className="form-group">
                   <input
                     type="radio"
                     id="attendanceChoice3"
@@ -97,7 +71,58 @@ const Rsvp = ({ access }) => {
                   />
                   <label htmlFor="attendanceChoice3">Maybe</label>
                 </div>
-              </fieldset>
+              </div>
+            </fieldset>
+            {access.includes("reception") && (
+              <>
+                <fieldset>
+                  <legend>Will you attend the reception?</legend>
+                  <div>
+                    <div className="form-group">
+                      <input
+                        type="radio"
+                        id="attendanceChoice1"
+                        name="attendance"
+                        value="yes"
+                      />
+                      <label htmlFor="attendanceChoice1">Yes</label>
+                    </div>
+
+                    <div className="form-group">
+                      <input
+                        type="radio"
+                        id="attendanceChoice2"
+                        name="attendance"
+                        value="no"
+                      />
+                      <label htmlFor="attendanceChoice2">No</label>
+                    </div>
+
+                    <div className="form-group">
+                      <input
+                        type="radio"
+                        id="attendanceChoice3"
+                        name="attendance"
+                        value="maybe"
+                      />
+                      <label htmlFor="attendanceChoice3">Maybe</label>
+                    </div>
+                  </div>
+                </fieldset>
+                <div className="form-group">
+                  <label htmlFor="song">
+                    What song will <i>definitely</i> get you on the dance floor?
+                  </label>
+                  <input type="text" name="song" id="song" />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="restrictions">
+                    Any dietary restrictions or preferences?
+                  </label>
+                  <input type="text" name="restrictions" id="restrictions" />
+                </div>
+              </>
             )}
             <button type="submit">Submit</button>
           </form>
