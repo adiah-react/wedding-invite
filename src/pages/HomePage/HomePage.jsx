@@ -1,9 +1,23 @@
 import { HeartIcon } from "lucide-react";
 import { motion } from "motion/react";
 
+import { useState } from "react";
+import { useNavigate } from "react-router";
 import "./homePage.scss";
 
 const HomePage = () => {
+  const [code, setCode] = useState("");
+  const navigate = useNavigate();
+
+  const handleCodeChange = (event) => {
+    setCode(event.target.value);
+  };
+
+  const handleSubmit = () => {
+    if (code) {
+      navigate(`/invite/${code}`);
+    }
+  };
   // Animation variants
   const fadeIn = {
     hidden: {
@@ -158,10 +172,14 @@ const HomePage = () => {
                 type="text"
                 id="inviteCode"
                 placeholder="Enter invite code here..."
+                value={code}
+                onChange={handleCodeChange}
                 // className="w-full px-3 py-2 border-border-gray-600 rounded-md focus:outline-none focus:ring-1 focus:ring-white text-white"
               />
             </div>
-            <button className="submit-code">Submit</button>
+            <button className="submit-code" onClick={handleSubmit}>
+              Submit
+            </button>
           </div>
         </motion.div>
       </section>
