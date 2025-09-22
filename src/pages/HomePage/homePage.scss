@@ -1,0 +1,50 @@
+// .code {
+//   display: grid;
+//   grid-template-columns: 4;
+//   grid-template-areas: "input input input button";
+//   align-items: center;
+
+//   .form-control {
+//     grid-area: input;
+//     display: flex;
+//     flex-direction: column;
+
+//     input {
+//       background-color: aliceblue;
+//       border-radius: 5px;
+//     }
+//   }
+
+//   .submit-code {
+//     grid-area: button;
+//   }
+// }
+
+.code {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-inline: 1rem;
+
+  .form-control {
+    input {
+      background-color: azure;
+      border-radius: 5px;
+      width: 100%;
+      padding: 0.5rem;
+
+      &::placeholder {
+        color: black;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .submit-code {
+    // align-self: end;
+    // width: 100%;
+    background-color: rgb(240, 204, 112);
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+}

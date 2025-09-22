@@ -1,0 +1,6 @@
+@use "../../sass/abstracts/" as abs;
+
+.pad-it {
+  padding-inline: abs.rem(19);
+  padding-block-end: 2rem;
+}
