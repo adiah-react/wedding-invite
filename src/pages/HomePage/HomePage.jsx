@@ -63,30 +63,60 @@ const HomePage = () => {
           <motion.div variants={fadeIn}>
             <HeartIcon className="h-16 w-16 text-white mx-auto" />
           </motion.div>
-          <motion.h1
+          {/* <motion.h1
             className="mt-6 text-5xl font-serif font-light text-white tracking-wide"
             variants={fadeIn}
           >
             Rhi & Rashaad
+          </motion.h1> */}
+          <motion.h1
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            // transition={{ delay: 3, duration: 0.8, ease: "easeOut" }}
+            transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+            viewport={{
+              once: true,
+              // margin: "-200px",
+              // amount: 0.75
+            }}
+          >
+            Rhiannon <span className="cursive">&amp;</span> Rashaad
           </motion.h1>
-          <motion.div
+          {/* <motion.div
             className="mt-4 text-xl text-gray-200 font-light tracking-widest"
             variants={fadeIn}
+            transition={{ delay: 1.0 }}
+          >
+            ARE GETTING MARRIED
+          </motion.div> */}
+          <motion.div
+            className="text"
+            initial={{ x: 300, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 1.0, duration: 0.8, ease: "easeOut" }}
           >
             ARE GETTING MARRIED
           </motion.div>
           <motion.div
+            className="date"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 1.5, duration: 0.8, ease: "easeOut" }}
+            viewport={{
+              once: true,
+              margin: "-100px",
+            }}
+          >
+            <p className="month">June</p>
+            <p className="day">20</p>
+          </motion.div>
+          {/* <motion.div
             className="mt-8 text-2xl font-serif text-white"
             variants={fadeIn}
           >
             June 20, 2026
-          </motion.div>
-          <motion.div className="mt-16" variants={fadeIn}>
-            <p className="text-lg text-gray-200">
-              Welcome
-              {/* <span className="font-medium">{guest.name}</span> */}
-            </p>
-          </motion.div>
+          </motion.div> */}
+
           <motion.div className="mt-12" variants={fadeIn}>
             <a
               href="#details"
